@@ -2,7 +2,7 @@
   <div>
     <Card>
       <template #title>
-        Login
+        ログイン
       </template>
       <template #content>
         <div class="fields">
@@ -17,7 +17,7 @@
         </div>
         <span>{{message}}</span>
         <div class="p-field">
-          <Button icon="pi pi-check" label="Login" v-on:click="login" />
+          <Button icon="pi pi-check" label="ログイン" v-on:click="login" />
         </div>
       </template>
     </Card>

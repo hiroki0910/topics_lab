@@ -2,7 +2,7 @@
   <div>
     <Card>
       <template #title>
-        Login
+        ログイン
       </template>
       <template #content>
         <div class="fields">
@@ -15,9 +15,10 @@
             <InputText id="password" type="password" v-model="password" />
           </div>
         </div>
-        <span>{{message}}</span>
+        <div class="message">{{message}}</div>
         <div class="p-field">
-          <Button icon="pi pi-check" label="Login" v-on:click="login" />
+          <Button icon="pi pi-check" label="ログイン" v-on:click="login" />
+          <a href="http://localhost:8080/new_register" target="_blank">新規登録はこちら</a>
         </div>
       </template>
     </Card>
@@ -86,6 +87,9 @@ export default {
       display: block;
       width: 100%;
     }
+  }
+  .message {
+    color: red
   }
 }
 </style>

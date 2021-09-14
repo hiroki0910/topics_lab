@@ -86,4 +86,9 @@ export default {
   text-align: right;
   display: block;
 }
+#btn_1{
+  position: absolute;
+  margin-bottom: 15px;
+  margin-left: 25%;
+}
 </style>

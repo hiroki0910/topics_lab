@@ -15,7 +15,7 @@
             <InputText id="password" type="password" v-model="password" />
           </div>
         </div>
-        <div class="message">{{message}}</message>
+        <div class="message">{{message}}</div>
         <div class="p-field">
           <Button icon="pi pi-check" label="Login" v-on:click="login" />
         </div>

@@ -87,7 +87,7 @@ export default {
 }
 #btn_1{
   position: absolute;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   margin-left: 25%;
 }
 </style>

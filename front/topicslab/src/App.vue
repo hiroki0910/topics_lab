@@ -1,16 +1,21 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">ホーム</router-link> |
     <template v-if="authenticated">
-      <a>mypage</a>
+      <a>マイページ</a>
     </template>
     <template v-else>
-      <router-link to="/login">login</router-link>
+      <router-link to="/login">ログイン</router-link>
     </template>
   </div>
   <div class="content">
     <router-view/>
   </div>
+  <footer>
+       <div class="copyright">
+           <p><small>&copy; 2021 トピックス ラボ</small></p>
+       </div>
+   </footer>
 </template>
 
 <script>
@@ -66,5 +71,12 @@ body {
       color: #42b983;
     }
   }
+}
+
+.copyright{
+  text-align: center;
+  color: #FFF;
+  font-weight: bolder;
+  border-top: 2px solid;
 }
 </style>

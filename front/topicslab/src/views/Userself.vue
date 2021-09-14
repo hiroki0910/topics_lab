@@ -7,6 +7,8 @@
       <template #content>
         {{user.name}}
       </template>
+      <a href="#">投稿</a>
+        <a href="#">コメント</a>
       <template #footer>
         <Button label="トピックを作る" v-on:click="toNewTopic" />
         <Button label="ログアウト" class="p-button-warning" v-on:click="logout" />

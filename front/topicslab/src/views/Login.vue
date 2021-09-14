@@ -15,7 +15,7 @@
             <InputText id="password" type="password" v-model="password" />
           </div>
         </div>
-        <div class="message">{{message}}</message>
+        <div class="message">{{message}}</div>
         <div class="p-field">
           <Button icon="pi pi-check" label="ログイン" v-on:click="login" />
           <a href="http://localhost:8080/new_register" target="_blank">新規登録はこちら</a>

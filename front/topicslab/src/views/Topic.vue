@@ -10,7 +10,7 @@
         </div>
       </template>
       <template #footer>
-        
+        <Button icon="pi pi-heart" class="p-button-rounded p-button-help" id="btn_1"/>
         <span>
           <router-link :to="`/user/${user.id}`">{{user.name}}</router-link>
         </span>
@@ -87,6 +87,7 @@ export default {
 }
 #btn_1{
   position: absolute;
-  margin-right: 300%;
+  margin-bottom: 15%;
+  margin-left: 10%;
 }
 </style>

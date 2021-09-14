@@ -10,6 +10,7 @@
         </div>
       </template>
       <template #footer>
+        
         <span>
           <router-link :to="`/user/${user.id}`">{{user.name}}</router-link>
         </span>
@@ -83,5 +84,9 @@ export default {
 .p-card-footer span {
   text-align: right;
   display: block;
+}
+#btn_1{
+  position: absolute;
+  margin-right: 300%;
 }
 </style>

@@ -4,6 +4,8 @@
       <template #content>
         {{user.name}}
       </template>
+      <a href="#">投稿</a>
+      <a href="#">コメント</a>
     </Card>
   </div>
 </template>

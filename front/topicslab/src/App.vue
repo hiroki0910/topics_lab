@@ -11,6 +11,11 @@
   <div class="content">
     <router-view/>
   </div>
+  <footer>
+       <div class="copyright">
+           <p><small>&copy; 2021 トピックス ラボ</small></p>
+       </div>
+   </footer>
 </template>
 
 <script>
@@ -66,5 +71,12 @@ body {
       color: #42b983;
     }
   }
+}
+
+.copyright{
+  text-align: center;
+  color: #FFF;
+  font-weight: bolder;
+  border-top: 2px solid;
 }
 </style>

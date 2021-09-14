@@ -1,10 +1,11 @@
 <template>
   <Card>
     <template #title>
-      新しいTopicを投稿しよう
+      新しいトピックを投稿しよう
     </template>
     <template #content>
-     <div class="p-field">
+
+      <div class="p-field">
         <label for="title">トピックタイトル</label>
         <InputText v-model="title" id="title" type="text" aria-describedby="title-help" />
         <small id="title-help">タイトルを入力してください。</small>
@@ -16,7 +17,7 @@
         <span class="attention">{{messages.body}}</span>
       </div>
       <div class="p-field">
-        <Button icon="pi pi-check" label="Save" v-on:click="submit" />
+        <Button icon="pi pi-check" label="保存" v-on:click="submit" />
         <span class="attention">{{messages.submit}}</span>
       </div>
     </template>

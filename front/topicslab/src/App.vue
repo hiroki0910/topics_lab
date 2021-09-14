@@ -2,13 +2,12 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <template v-if="authenticated">
-      <a>mypage</a>
+      <router-link to="/mypage">mypage</router-link>
     </template>
     <template v-else>
       <router-link to="/login">login</router-link>
     </template>
-  </div>
-  <div class="content">
+  </div>  <div class="content">
     <router-view/>
   </div>
 </template>

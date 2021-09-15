@@ -48,7 +48,4 @@ export default {
   margin-bottom: -4.5%;
   margin-left: -2.5%;
 }
-#name_btn {
-  border: none;
-}
 </style>

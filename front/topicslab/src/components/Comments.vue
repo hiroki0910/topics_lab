@@ -2,7 +2,9 @@
   <div>
     <Fieldset v-for="comment in comments" :key="comment.id">
       <template #legend>
-        <span>{{comment.user.name}}</span>
+        <span>
+          <router-link :to="`/user/${comment.user.id}`">{{comment.user.name}}</router-link>
+        </span>
       </template>
       <div class="comment-text">
         {{comment.body}}
@@ -17,6 +19,13 @@ export default {
   name: 'Comments',
   props: {
     comments: Array
+  },
+  data () {
+    return {
+      topic: {},
+      user: {},
+      id: null
+    }
   },
   buttonClick () {
     alert('click')
@@ -38,5 +47,8 @@ export default {
 #btn_1 {
   margin-bottom: -4.5%;
   margin-left: -2.5%;
+}
+#name_btn {
+  border: none;
 }
 </style>

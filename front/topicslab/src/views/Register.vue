@@ -61,6 +61,7 @@ export default {
             .then((res) => {
               if (res.status === 201) {
                 alert('ユーザー登録成功')
+                window.location.href = '/login'
               } else {
                 this.message = 'ユーザー登録に失敗しました。'
               }

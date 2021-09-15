@@ -7,6 +7,7 @@
       <div class="comment-text">
         {{comment.body}}
       </div>
+      <Button icon="pi pi-heart" class="p-button-rounded p-button-help" input type="submit" onclick="alert ('『いいね♥』をありがとう！');" id="btn_1"/>
     </Fieldset>
   </div>
 </template>
@@ -16,6 +17,11 @@ export default {
   name: 'Comments',
   props: {
     comments: Array
+  },
+  buttonClick () {
+    alert('click')
+    const button = document.getElementById('btn_1')
+    button.addEventListener('click', 'buttonClick')
   }
 }
 </script>
@@ -27,5 +33,10 @@ export default {
 
 .comment-text {
   white-space:pre-wrap;
+}
+
+#btn_1 {
+  margin-bottom: -4.5%;
+  margin-left: -2.5%;
 }
 </style>

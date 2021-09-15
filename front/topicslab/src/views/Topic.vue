@@ -4,13 +4,8 @@
       <template #title>
         {{topic.title}}
       </template>
-      <template #content>
-        <div class="body-text">
-          {{topic.body}}
-        </div>
-      </template>
       <template #footer>
-        <Button icon="pi pi-heart" class="p-button-rounded p-button-help" id="btn_1"/>
+        <Button icon="pi pi-heart" class="p-button-rounded p-button-help" input type="submit" onclick="alert ('『いいね♥』をありがとう！');" id="btn_1"/>
         <span>
           <router-link :to="`/user/${user.id}`">{{user.name}}</router-link>
         </span>
@@ -73,6 +68,11 @@ export default {
     receiveComment (comment) {
       this.comments.push(comment)
     }
+  },
+  buttonClick () {
+    alert('click')
+    const button = document.getElementById('btn_1')
+    button.addEventListener('click', 'buttonClick')
   }
 }
 </script>
@@ -80,14 +80,10 @@ export default {
 <style scoped>
 .body-text {
   white-space:pre-wrap;
+  padding-bottom: 13%;
 }
 .p-card-footer span {
   text-align: right;
   display: block;
-}
-#btn_1{
-  position: absolute;
-  margin-bottom: 30px;
-  margin-left: 25%;
 }
 </style>

@@ -38,6 +38,11 @@ Route::get('/topics', [
     'index'
 ]);
 
+Route::delete('/withdraw', [
+    App\Http\Controllers\UserController::class,
+    'destroy'
+]);
+
 Route::middleware('auth:sanctum')->get('/topic/{topic}', [
     App\Http\Controllers\TopicController::class,
     'show'

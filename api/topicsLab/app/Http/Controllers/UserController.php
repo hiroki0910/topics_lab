@@ -53,7 +53,12 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return $user;
+        return $user::where('id', $user->id)->with('topics', 'comments.topic')->get();
+        // where('id', 1) is SELECT * FROM users where idがuserのid つまりユーザーを取得
+        // with('user', 'comments.user') is
+            // SELECT * FROM topics WHERE idが1のtopic つまり、ユーザーのトピックを取得
+            // SELECT * FROM comments WHERE user_idが1のcomment つまり、コメントを取得
+            // SELECT * FROM topics WHERE idが2のtopic つまり、(あるユーザーが)コメントを投稿したトピックを取得;
     }
 
     /**

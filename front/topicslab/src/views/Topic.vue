@@ -35,7 +35,12 @@ export default {
       id: null
     }
   },
+
   mounted () {
+    if (localStorage.getItem('authenticated') !== 'true') {
+      this.$router.push({ path: '/login' })
+      return
+    }
     this.id = this.$route.params.id
     if (!this.id) {
       alert('不正なIDです。')

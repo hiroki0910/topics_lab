@@ -4,6 +4,7 @@
       <template #title>
         {{user.name}}
       </template>
+
       <template #content>
         <div class="tab_container">
           <input id="tab1" type="radio" name="tab_item" checked>

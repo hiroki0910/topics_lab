@@ -39,7 +39,7 @@ export default {
   },
   mounted () {
     if (localStorage.getItem('authenticated') !== 'true') {
-      this.$router.push({ path: '/login' })
+      this.$router.push('login')
       return
     }
 

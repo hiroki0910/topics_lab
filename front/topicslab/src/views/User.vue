@@ -3,30 +3,14 @@
     <Card>
       <template #title>
         {{user.name}}
-        <div class="tab_container">
-          <input id="tab1" type="radio" name="tab_item" checked>
-          <label class="tab_item" for="tab1">投稿</label>
-          <input id="tab2" type="radio" name="tab_item">
-          <label class="tab_item" for="tab2">コメント</label>
-          <div class="tab_content" id="tab1_content">
-            <div class="tab_content_description">
-              <p class="c-txtsp">投稿した内容</p>
-            </div>
-          </div>
-          <div class="tab_content" id="tab2_content">
-            <div class="tab_content_description">
-              <p class="c-txtsp">コメントした内容</p>
-            </div>
-          </div>
-        </div>
       </template>
       <template #content>
         <div class="tab_container">
           <input id="tab1" type="radio" name="tab_item" checked>
           <label class="tab_item" for="tab1">投稿</label>
-          <input id="tab2" type="radio" name="tab_item">
+          <input id="tab2" type="radio" name="tab_item" checked>
           <label class="tab_item" for="tab2">コメント</label>
-          <div class="tab_content" id="tab1_content">
+          <div class="tab_content" id="tab1_content" checked>
             <div class="tab_content_description">
               <p class="c-txtsp">投稿した内容</p>
             </div>
@@ -73,7 +57,7 @@ export default {
             .then((res) => {
               console.log(res)
               if (res.status === 200) {
-                this.user = res.data
+                this.user = res.data[0]
               } else {
                 console.log('取得失敗')
               }

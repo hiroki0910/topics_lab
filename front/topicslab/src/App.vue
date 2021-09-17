@@ -2,19 +2,20 @@
   <div id="nav">
     <router-link to="/">ホーム</router-link> |
     <template v-if="authenticated">
-    <router-link to="/mypage">マイページ</router-link>
+      <router-link to="/mypage">マイページ</router-link>
     </template>
     <template v-else>
       <router-link to="/login">ログイン</router-link>
     </template>
-  </div>  <div class="content">
+  </div>
+  <div class="content">
     <router-view/>
   </div>
   <footer>
-       <div class="copyright">
-           <p><small>&copy; 2021 トピックス ラボ</small></p>
-       </div>
-   </footer>
+    <div class="copyright">
+      <p><small>&copy; 2021 トピックス ラボ</small></p>
+    </div>
+  </footer>
 </template>
 
 <script>

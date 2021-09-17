@@ -8,21 +8,21 @@
         {{user.name}}
       </template>
       <template>
-    <div class="p-tabview p-component">
-        <ul ref="nav" class="p-tabview-nav" role="tablist">
+        <div class="p-tabview p-component">
+          <ul ref="nav" class="p-tabview-nav" role="tablist">
             <li role="presentation" v-for="(tab, i) of tabs" :key="tab.header || i" :class="[{'p-highlight': (tab.d_active), 'p-disabled': tab.disabled}]">
                 <a role="tab" class="p-tabview-nav-link" @click="onTabClick($event, tab)" @keydown="onTabKeydown($event, tab)" :tabindex="tab.disabled ? null : '0'" :aria-selected="tab.d_active" v-ripple>
-                    <span class="p-tabview-title" v-if="tab.header">{{tab.header}}</span>
-                    <TabPanelHeaderSlot :tab="tab" v-if="tab.$scopedSlots.header" />
+                  <span class="p-tabview-title" v-if="tab.header">{{tab.header}}</span>
+                  <TabPanelHeaderSlot :tab="tab" v-if="tab.$scopedSlots.header" />
                 </a>
             </li>
             <li ref="inkbar" class="p-tabview-ink-bar"></li>
-        </ul>
-        <div class="p-tabview-panels">
-            <slot></slot>
+          </ul>
         </div>
-    </div>
-</template>
+        <div class="p-tabview-panels">
+          <slot></slot>
+        </div>
+      </template>
       <template #footer>
         <Button label="投稿する" v-on:click="toNewTopic" />
         <Button label="ログアウト" class="p-button-warning" v-on:click="logout" />

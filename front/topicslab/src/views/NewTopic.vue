@@ -4,7 +4,6 @@
       新しいトピックを投稿しよう
     </template>
     <template #content>
-
       <div class="p-field">
         <label for="title">トピックタイトル</label>
         <InputText v-model="title" id="title" type="text" aria-describedby="title-help" />

@@ -10,6 +10,7 @@
         </div>
       </template>
       <template #footer>
+        <Button icon="pi pi-heart" class="p-button-rounded p-button-help" input type="submit" onclick="alert ('『いいね♥』をありがとう！');" id="btn_1"/>
         <span>
           <router-link :to="`/user/${user.id}`">{{user.name}}</router-link>
         </span>
@@ -39,7 +40,12 @@ export default {
       id: null
     }
   },
+
   mounted () {
+    if (localStorage.getItem('authenticated') !== 'true') {
+      this.$router.push({ path: '/login' })
+      return
+    }
     this.id = this.$route.params.id
     if (!this.id) {
       alert('不正なIDです。')
@@ -72,6 +78,11 @@ export default {
     receiveComment (comment) {
       this.comments.push(comment)
     }
+  },
+  buttonClick () {
+    alert('click')
+    const button = document.getElementById('btn_1')
+    button.addEventListener('click', 'buttonClick')
   }
 }
 </script>
@@ -79,6 +90,7 @@ export default {
 <style scoped>
 .body-text {
   white-space:pre-wrap;
+  padding-bottom: 13%;
 }
 .p-card-footer span {
   text-align: right;

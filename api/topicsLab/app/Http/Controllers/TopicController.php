@@ -55,6 +55,11 @@ class TopicController extends Controller
     public function show(Topic $topic)
     {
         return Topic::where('id', $topic->id)->with('user', 'comments.user')->get();
+        // where('id', 1) is SELECT * FROM topics where idがtopicのid つまりトピックを取得
+        // with('user', 'comments.user') is
+            // SELECT * FROM users WHERE idが1のuser つまり、トピックを投稿したユーザーを取得
+            // SELECT * FROM comments WHERE topic_idが1のcomment つまり、コメントを取得
+            // SELECT * FROM users WHERE idが2のuser つまり、コメントを投稿したユーザーを取得;
     }
 
     /**
